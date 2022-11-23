@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Bluttest</title>
+</head>
+<body>
+<!--
+"
+
+
+
+
+
+
+
+-->
+
+<div class="container">
+    <h1> AlkooholTest</h1>
+        <form method="post" action="form" th:object="${AlkoholForm}">
+            <div class ="mb-3">
+            <label for="geschlecht">Geschlecht:  </label>
+             <input id="geschlecht" class="form-control" type="text" placeholder="divers" th:field="*{getGeschlecht()}"  >
+              <!--  <small class="txt-danger" th:if="${#fields.hasErrors('geschlecht')}" th:errors="*{geschlecht}">Ungültiges Geschlecht</small>-->
+            </div>
+            <div class="mb-3">
+                <label for="gewicht">Gewicht(kg):  </label>
+                <input id="gewicht" class="form-control" type="text" placeholder="70" th:field="*{getGewicht()}" >
+                <!-- <small class="txt-danger" th:if="${#fields.hasErrors('gewicht')}" th:errors="*{gewicht}">GewichtError</small> -->
+            </div>
+            <div class="mb-3">
+                <label for="bierMenge">Menge an Bier(ml):  </label>
+                <input id="bierMenge" class="form-control" type="number" placeholder="0" th:field="*{getBierMenge()}" >
+                <!--  <small class="txt-danger" th:if="${#fields.hasErrors('bierMenge')}" th:errors="*{bierMenge}">bierMengeError</small> -->
+             </div>
+             <div class="mb-3">
+                 <label for="weinMenge">Menge an Wein(ml):  </label>
+                 <input id="weinMenge" class="form-control" type="number" placeholder="0" th:field="*{getWeinMenge()}">
+                 <!-- <small class="txt-danger" th:if="${#fields.hasErrors('bierMenge')}" th:errors="*{weinMenge}">weinMengeError</small> -->
+             </div>
+             <div class="mb-3">
+                 <label for="kornMenge">Menge an Korn(ml):  </label>
+                 <input id="kornMenge" class="form-control" type="number" placeholder="0" th:field="*{getKornMenge()}">
+                 <!--  <small class="txt-danger" th:if="${#fields.hasErrors('kornMenge')}" th:errors="*{kornMenge}">kornMengeError</small> -->
+             </div>
+             <div class="mb-3">
+                 <label for="vodkaMenge">Menge an Vodka(ml):  </label>
+                 <input id="vodkaMenge" class="form-control" type="number" placeholder="0" th:field="*{getVodkaMenge()}">
+                 <!-- <small class="txt-danger" th:if="${#fields.hasErrors('vodkaMenge')}" th:errors="*{vodkaMenge}">vodkaMengeError</small> -->
+             </div>
+             <div class="mb-3">
+                 <label for="whiskeyMenge">Menge an Whiskey(ml):  </label>
+                 <input id="whiskeyMenge" class="form-control" type="number" placeholder="0" th:field="*{getWhiskeyMenge()}">
+                 <!-- <small class="txt-danger" th:if="${#fields.hasErrors('whiskeyMenge')}" th:errors="*{whiskeyMenge}">whiskeyMengeError</small> -->
+             </div>
+            <br>
+             <div class="btn btn-primary">
+                 <button type="submit" class="prim-btn" >Ergebnis anzeigen </button>
+             </div>
+
+     </form>
+
+ </div>
+ </body>
+ </html>
